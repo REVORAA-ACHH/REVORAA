@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REVORAA — Unbox More Than Just Products</title>
+<style>
+  :root{
+    --bg:#f4f0e8;
+    --ink:#151515;
+    --muted:#68655e;
+    --accent:#d7ff45;
+    --card:#fffdf8;
+    --line:#d9d3c7;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.5;
+  }
+  nav{
+    position:sticky;top:0;z-index:10;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 6vw;
+    background:rgba(244,240,232,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{font-weight:900;letter-spacing:2px;font-size:22px}
+  nav a{color:var(--ink);text-decoration:none;margin-left:24px;font-size:14px;font-weight:700}
+  .hero{
+    min-height:86vh;padding:80px 6vw 60px;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;
+  }
+  .tag{
+    display:inline-block;padding:8px 12px;border:1px solid var(--ink);
+    border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.8px;
+  }
+  h1{font-size:clamp(56px,9vw,120px);line-height:.88;margin:24px 0 20px;letter-spacing:-6px}
+  .hero p{max-width:600px;color:var(--muted);font-size:19px}
+  .btn{
+    display:inline-block;margin-top:20px;padding:14px 20px;
+    background:var(--ink);color:white;text-decoration:none;border-radius:12px;font-weight:800;
+  }
+  .visual{position:relative;min-height:430px;display:grid;place-items:center}
+  .box{
+    width:min(470px,90%);height:270px;background:#c9975d;
+    border:4px solid #17130f;border-radius:18px;
+    transform:rotate(-6deg);box-shadow:20px 25px 0 rgba(21,21,21,.12);
+    position:relative;display:flex;align-items:center;justify-content:center;
+  }
+  .box:before{
+    content:"";position:absolute;inset:24px;border:2px dashed rgba(21,21,21,.35);border-radius:10px;
+  }
+  .box-label{text-align:center;z-index:1}
+  .box-label b{font-size:42px;letter-spacing:3px}
+  .box-label span{display:block;font-size:13px;font-weight:800;margin-top:6px}
+  .qr{
+    position:absolute;right:-15px;bottom:18px;width:82px;height:82px;
+    background:repeating-linear-gradient(45deg,#111 0 4px,#fff 4px 8px);
+    border:7px solid white;box-shadow:0 5px 20px rgba(0,0,0,.15);
+  }
+  section{padding:90px 6vw;border-top:1px solid var(--line)}
+  .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+  .eyebrow{font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+  h2{font-size:clamp(38px,6vw,70px);line-height:.95;margin:10px 0 0;letter-spacing:-3px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;
+    min-height:210px;
+  }
+  .num{font-size:13px;font-weight:900;color:var(--muted)}
+  .card h3{font-size:25px;margin:35px 0 8px}
+  .card p{color:var(--muted);margin:0}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{padding:28px;border-left:4px solid var(--ink);background:#ebe5da;border-radius:0 16px 16px 0}
+  .step strong{display:block;font-size:30px;margin-bottom:12px}
+  .highlight{
+    background:var(--accent);border:3px solid var(--ink);border-radius:26px;
+    padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  }
+  .highlight p{font-size:19px}
+  .specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .spec{padding:15px;background:rgba(255,255,255,.55);border:1px solid rgba(21,21,21,.18);border-radius:12px}
+  .spec b{display:block}
+  footer{padding:40px 6vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}
+  @media(max-width:800px){
+    .hero,.highlight{grid-template-columns:1fr}
+    .grid,.steps{grid-template-columns:1fr}
+    nav a{display:none}
+    h1{letter-spacing:-3px}
+    section{padding:65px 6vw}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">REVORAA</div>
+  <div>
+    <a href="#about">ABOUT</a>
+    <a href="#how">HOW IT WORKS</a>
+    <a href="#specs">SPECS</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="tag">RETHINKING ONLINE DELIVERY PACKAGING</span>
+    <h1>UNBOX.<br>REUSE.<br>REIMAGINE.</h1>
+    <p>
+      REVORAA redesigns the ordinary delivery box into a practical, reusable package
+      that can have a life beyond the first delivery.
+    </p>
+    <a class="btn" href="#how">Explore REVORAA ↓</a>
+  </div>
+  <div class="visual">
+    <div class="box">
+      <div class="box-label">
+        <b>REVORAA</b>
+        <span>UNBOX MORE THAN JUST PRODUCTS</span>
+      </div>
+      <div class="qr" aria-label="QR code placeholder"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">01 / The idea</div>
+      <h2>One box.<br>More purpose.</h2>
+    </div>
+    <p style="max-width:420px;color:var(--muted)">
+      Traditional delivery packaging often has a very short useful life.
+      REVORAA explores a packaging system designed around reuse, easy handling and a second purpose.
+    </p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="num">01</div><h3>Deliver</h3><p>Protect the product during online delivery with a familiar, practical box format.</p></article>
+    <article class="card"><div class="num">02</div><h3>Transform</h3><p>After opening, the packaging can be reconfigured instead of immediately becoming waste.</p></article>
+    <article class="card"><div class="num">03</div><h3>Reuse</h3><p>Give the box another useful role at home, in a hostel, at college or at work.</p></article>
+  </div>
+</section>
+
+<section id="how">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">02 / How it works</div>
+      <h2>From delivery<br>to second life.</h2>
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step"><strong>01 — RECEIVE</strong><span>Open the delivery normally and keep the REVORAA packaging instead of throwing it away.</span></div>
+    <div class="step"><strong>02 — TRANSFORM</strong><span>Follow the printed fold/lock guidance or scan the QR code for the reuse instructions.</span></div>
+    <div class="step"><strong>03 — REUSE</strong><span>Use the transformed box as the intended secondary organiser/storage solution.</span></div>
+  </div>
+</section>
+
+<section id="specs">
+  <div class="highlight">
+    <div>
+      <div class="eyebrow">03 / Prototype</div>
+      <h2>Designed for a real 3D model.</h2>
+      <p>This concept is being developed as a physical prototype using CAD and 3D printing, so the dimensions and locking details can be tested and improved.</p>
+    </div>
+    <div>
+      <div class="specs">
+        <div class="spec"><b>250 mm</b>Length</div>
+        <div class="spec"><b>180 mm</b>Width</div>
+        <div class="spec"><b>100 mm</b>Height</div>
+        <div class="spec"><b>2.5 mm</b>Prototype wall</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">04 / QR guide</div>
+      <h2>Scan it.<br>See how.</h2>
+    </div>
+    <p style="max-width:420px;color:var(--muted)">
+      The final prototype can carry a QR code that opens this guide, making the transformation instructions available without printing a large manual on every box.
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><strong>REVORAA</strong> — Unbox More Than Just Products.</div>
+  <div>Design Thinking / Prototype Project</div>
+</footer>
+</body>
+</html>
